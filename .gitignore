@@ -1,32 +1,29 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+//Average Three Scores
+// E. Conklin AUG 31 2022
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+string filename;//name ot file to open
+ifstream file;//scores file
+int firstscore;// the first score
+int secondscore;// the second score
+int thirdscore;// the third score
+int i;//counter
+double average;
+cout<<"ENTER FILE NAME\n";
+getline(cin, filename);
+  for ( i = 0; i < 1; i++) {
+file.open(filename);//OPEN FILE (scores.txt)
+if (!file){
+  cout << "FILE NOT FOUND TRY ANOTHER FILE\n";
+  
+  getline(cin, filename);
+  i=i-1;
+}}
+file >> firstscore >> secondscore >> thirdscore;
+average = (firstscore + secondscore + thirdscore)/3.0;//calculating the average
+cout << "THE AVERAGE OF THE THREE SCORES IS " << average << ".\n";// outputs results
+  
+}
